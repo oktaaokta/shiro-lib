@@ -1,1 +1,1 @@
-# shiro-lib
+# This is a personal library for personal/work related stuff
