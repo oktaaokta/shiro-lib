@@ -5,10 +5,17 @@ import (
 	"fmt"
 )
 
+type JSONComparator struct {
+}
+
+func New() JSONComparator {
+	return JSONComparator{}
+}
+
 // CompareJSONKeys compares between two jsons to see whether there is a difference in missing keys.
 // It compares both JSONs keys (not including the values).
 // It returns string message, and boolean of whether there is a difference or not.
-func CompareJSONKeys(json1, json2 string) (string, bool) {
+func (j *JSONComparator) CompareJSONKeys(json1, json2 string) (string, bool) {
 	var message string
 	var isDifferent bool
 
